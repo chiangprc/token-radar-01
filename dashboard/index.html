@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Token Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="hdr">
+  <div class="hdr-top">
+    <h1>Pre-Token Radar</h1>
+    <span class="tag" id="hdr-model"></span>
+  </div>
+  <p class="sub" id="hdr-sub"></p>
+  <dl class="stats" id="hdr-stats"></dl>
+  <p class="src" id="hdr-src"></p>
+</header>
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button type="button" role="tab" data-tab="board" aria-pressed="true">Board</button>
+  <button type="button" role="tab" data-tab="model" aria-pressed="false">Model</button>
+  <button type="button" role="tab" data-tab="farm" aria-pressed="false">Farm</button>
+  <button type="button" role="tab" data-tab="about" aria-pressed="false">About data</button>
+</nav>
+<main id="main">
+  <section id="tab-board" aria-label="Ranked board"></section>
+  <section id="tab-model" aria-label="Model" hidden></section>
+  <section id="tab-farm" aria-label="Farm Calculator" hidden></section>
+  <section id="tab-about" aria-label="About the data" hidden></section>
+</main>
+<aside id="drawer" aria-label="Protocol detail" hidden></aside>
+<p id="load-error" class="err" hidden>Data failed to load. Open this page from the output folder, with data.js beside dashboard/.</p>
+<noscript><p class="err">This dashboard needs JavaScript. Enable it and reload.</p></noscript>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
